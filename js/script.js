@@ -67,11 +67,11 @@ function mUp(obj) {
 
 play.addEventListener("click", ()=>{
   if (song.paused) {
-    playPauseIcon.src = "/public/src/pause-btn.png"
+    playPauseIcon.src = "src/pause-btn.png"
     vinyl.style.animation = "spin 6s linear infinite"
     song.play()
   } else {
-    playPauseIcon.src = "/public/src/play-btn.png"
+    playPauseIcon.src = "src/play-btn.png"
     vinyl.style.animationPlayState = "paused"
     song.pause()
   }
