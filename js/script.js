@@ -9,8 +9,7 @@ const play = document.getElementById("play");
 const playPauseIcon = document.getElementById("play-pause-icon")
 const vinyl = document.getElementById("vinyl");
 const song = document.getElementById("song");
-const canvas = document.getElementById("canvas");
-
+const bubbles = document.getElementById("bubbles")
 // setTimeout(()=>{
 //   tangan.classList.add('-translate-y-[315px]')
 // }, 500)
@@ -70,10 +69,12 @@ play.addEventListener("click", ()=>{
     playPauseIcon.src = "src/pause-btn.png"
     vinyl.style.animation = "spin 6s linear infinite"
     song.play()
+    bubbles.classList.replace('opacity-0', 'opacity-100')
   } else {
     playPauseIcon.src = "src/play-btn.png"
     vinyl.style.animationPlayState = "paused"
     song.pause()
+    bubbles.classList.replace('opacity-100', 'opacity-0')
   }
 })  
 
